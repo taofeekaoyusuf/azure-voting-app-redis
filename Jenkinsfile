@@ -20,6 +20,7 @@ pipeline {
             """)
          }
       }
+   }
    //    stage('Start test app') {
    //       steps {
    //          pwsh(script: """
