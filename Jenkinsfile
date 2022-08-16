@@ -7,7 +7,11 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
-
+      stage('Install Docker') {
+         steps {
+            sh(script: 'apt-get update && apt-get install -y docker')
+         }
+      }
       stage('Docker Build') {
          steps {
             // sh(script: 'docker images -a')
